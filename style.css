@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-image: linear-gradient(to top left, #db2777 0%, #c9f4aa 100%);
+  color: #333;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+/* Elements */
+
+.game-container {
+  margin: 15rem auto;
+  width: 100rem;
+  height: 60rem;
+  display: flex;
+  border-radius: 36px;
+  background-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  filter: blur();
+  backdrop-filter: blur(200px);
+  overflow: hidden;
+}
+
+.player-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10rem;
+
+  transition: all 0.5s;
+}
+
+.player-name {
+  font-size: 6rem;
+  font-weight: 600;
+  color: #333;
+
+  transition: all 0.2s;
+}
+
+.score {
+  font-family: "Roboto mono";
+  font-size: 8rem;
+  font-weight: 800;
+
+  color: #db2777;
+}
+
+.current {
+  width: 25rem;
+  height: 15rem;
+  background-color: #db2777;
+  border-radius: 36px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.current-text {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+
+  margin-top: 3rem;
+}
+
+.current-score {
+  font-family: "Roboto Mono";
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: #fff;
+
+  margin-top: 1rem;
+}
+
+.player-active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.player-active .player-name {
+  font-weight: 700;
+}
+
+.player-winner {
+  background-image: linear-gradient(
+    to top left,
+    #e5fdd1,
+    #b5f1cc,
+    #e5fdd1,
+    #b5f1cc
+  );
+  filter: blur();
+  color: #db2777;
+}
+
+/* Absolute positioned elements */
+
+.dice {
+  width: 10rem;
+  height: 10rem;
+  position: absolute;
+  bottom: 55%;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+.btn {
+  width: 17rem;
+  height: 5rem;
+  border: none;
+  border-radius: 36px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #db2777;
+  font-size: 1.6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+.btn:active {
+  transform: translate(-50%, 3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.btn--new {
+  position: absolute;
+  top: 3.5rem;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+.btn--roll {
+  position: absolute;
+  bottom: 35%;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+.btn--hold {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+.developer {
+  color: #333;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.hidden {
+  display: none;
+}

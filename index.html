@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&family=Roboto+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pig-game</title>
+  </head>
+  <body>
+    <div class="game-container">
+      <div class="player-0 player-container player-active">
+        <span class="player-name player-name-0">Player 1</span>
+        <span class="score score-0">0</span>
+        <div class="current">
+          <span class="current-text">Current</span>
+          <span class="current-score current-score-0">0</span>
+        </div>
+      </div>
+      <div class="player-1 player-container">
+        <span class="player-name player-name-1">Player 2</span>
+        <span class="score score-1">0</span>
+        <div class="current">
+          <span class="current-text">Current</span>
+          <span class="current-score current-score-1">0</span>
+        </div>
+      </div>
+      <img src="dice-5.png" class="dice hidden" />
+      <button class="btn btn--new">🔄️ New game</button>
+      <button class="btn btn--roll">🎲 Roll dice</button>
+      <button class="btn btn--hold">🫴 Hold</button>
+    </div>
+    <span class="developer">developed by Alex Florea</span>
+
+    <script src="script.js"></script>
+  </body>
+</html>
